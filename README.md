@@ -1,10 +1,6 @@
-###############################################################################################################################
 APPROACH AND FINDINGS:
-###############################################################################################################################
 
-===============================================================================================================================
 BUSINESS UNDERSTANDING:
-===============================================================================================================================
 
 In the context of the CRISP-DM framework, the task of identifying key drivers for used vehicle prices can be reframed as a data 
 analysis problem as follows:
@@ -31,9 +27,7 @@ impact of different car attributes on their resale value.
 
 In the deployement phase, insights from the modeling are used to implement strategic used car dealer decisions.
 
-===============================================================================================================================
 DATA UNDERSTANDING:
-===============================================================================================================================
 
 This part involves exploring the dataset to understand its structure, quality, and the types of information it contains.
 
@@ -53,9 +47,7 @@ for transforming non-normal distributions, specifically with respect to the targ
 simplification, particularly with respect to the numerical columns, which may have interdependencies as identified by principal
 componenents analysis.
 
-===============================================================================================================================
 DATA CLEANING AND PREPARATION:
-===============================================================================================================================
 
 STEP 1: 'price', 'year', 'manufacturer', and 'VIN' were deemed crucial for subsequent cleaning of the dataset. Therefore, all
 rows where any of these values were missing were removed from the dataset.
@@ -106,9 +98,7 @@ distrbution for the target variable.
 
 After completion of the dataset cleaning steps, the original dataset was reduced from 426,880 rows to 111,376 rows.
 
-===============================================================================================================================
 MODELING:
-===============================================================================================================================
 
 In this stage, machine learning models were developed to understand the relationship between different variables and vehicle
 prices. I implemented five different modeling approaches in conjunction with GridSearchCV to optimize a set of hyper-parameters.
@@ -181,9 +171,7 @@ TEST SET R2: Measures the proportion of the variance in the dependent variable t
 variables in the dataset. It provides an indication of the goodness of fit of a model. The higher the score, the better the 
 fit, and the more the model explains the target values based on the independent variables.
 
-===============================================================================================================================
 DEPLOYMENT RECOMMENDATIONS:
-===============================================================================================================================
 
 The best model resulted from Random Forest Regression, which accounts for 84% of price variance. It is only valid for vehicles
 1) 0 - 30 years of age, 2) 12K - 325K miles, and 3) Vehicle Prices in the range of $2k - $80k. The conclusions provided below
@@ -248,9 +236,7 @@ Prioritize features in the following order:  1) age,                2) odometer,
 
  13. TITLE STATUS:   Stick with 'Clean' titles.
 
-===============================================================================================================================
  NEXT STEPS:
-===============================================================================================================================
 
    1) Investigate the vehicle sales price round-down effect. Sales revenue data indicates a common practice of rounding
       down final sales prices to the nearest $1K increment and even more so to the nearest $5K increment. This may represent
