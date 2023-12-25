@@ -1,5 +1,3 @@
-APPROACH AND FINDINGS:
-
 BUSINESS UNDERSTANDING:
 
 In the context of the CRISP-DM framework, the task of identifying key drivers for used vehicle prices can be reframed as a data 
